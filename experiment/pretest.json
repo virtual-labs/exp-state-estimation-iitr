@@ -1,39 +1,55 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[ 
+	{
+		"question": "What is the main purpose of state estimation in power systems ?",
+		"answers": {
+			"a": "To minimize errors in measurement",
+			"b": "To determine the system's state vector based on noisy measurements",
+			"c": "To increase system response time",
+			"d": "To control the system’s actuator directly"
+		},
+		"correctAnswer": "b"
+	},
+	{
+		"question": "What does the covariance matrix R represent in the WLS state estimation method?",
+		"answers": {
+			"a": "The measurement error correlation",
+			"b": "The system’s process noise",
+			"c": "The measurement matrix",
+			"d": "The inverse of the Jacobian"
+		},
+		"correctAnswer": "a"
+	},
+	{
+		"question": "What type of method is typically used in state estimation?",
+		"answers": {
+			"a": "Matrix inversion",
+			"b": "Fourier transform",
+			"c": "Time-domain simulation",
+			"d": "Least squares estimation"
+		},
+		"correctAnswer": "d"
+	},
+	{
+		"question": "In state estimation, what role does the measurement function h(x) play?",
+		"answers": {
+			"a": "It filters the measurement noise",
+			"b": "It updates the system’s state vector",
+			"c": "It defines the relationship between state and measurements",
+			"d": "It models system disturbances"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "In the WLS state estimation algorithm, what does the Jacobian matrix H(x) represent?",
+		"answers": {
+			"a": "The relationship between errors and measurement variables",
+			"b": "The linearization of the non-linear measurement function",
+			"c": "The process noise covariance",
+			"d": "The gain matrix of the filter"
+		},
+		"correctAnswer": "b"
+	}
+]
+
+
+  

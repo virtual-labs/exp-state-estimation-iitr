@@ -1,39 +1,52 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[ 
+	{
+		"question": "Which of the following is an assumption made about measurement errors in WLS state estimation?",
+		"answers": {
+			"a": "They are always normally distributed",
+			"b": "They follow a Poisson distribution",
+			"c": "They have zero mean and are independent",
+			"d": "They are correlated with system state variables"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "What does the gain matrix G(x) in the WLS state estimation algorithm represent?",
+		"answers": {
+			"a": "The inverse of the covariance matrix",
+			"b": "The linearization of the measurement function",
+			"c": "The weighting of different measurements",
+			"d": "The sensitivity of the state to measurement residuals"
+		},
+		"correctAnswer": "d"
+	},
+	{
+		"question": "What is the purpose of using the Taylor series expansion in state estimation algorithms?",
+		"answers": {
+			"a": "To linearize the non-linear measurement function",
+			"b": "To calculate the optimal measurement error covariance",
+			"c": "To minimize the state estimation error",
+			"d": "To derive the covariance matrix"
+		},
+		"correctAnswer": "a"
+	},
+	{
+		"question": "How does a state estimation algorithm update the state vector in each iteration?",
+		"answers": {
+			"a": "By adding a fixed value to the state vector",
+			"b": "By solving the system dynamics equation",
+			"c": "By using the gain matrix to correct the estimated state",
+			"d": "By directly measuring the system state"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "What does the term 'convergence' refer to in the context of state estimation?",
+		"answers": {
+			"a": "When the measurement error becomes constant",
+			"b": "When the algorithm stops iterating due to reaching a specified threshold",
+			"c": "When the system reaches its optimal control state",
+			"d": "When the state vector is reset to zero"
+		},
+		"correctAnswer": "b"
+	}
+]

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State Estimation using Weighted Least Square (WLS) method</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar / Header -->
+    <div class="navbar">
+      <h2>State Estimation using Weighted Least Square (WLS) method</h2>
+      <div class="instructions">
+        <button id="openInstructions">Instructions</button>
+      </div>
+    </div>
+
+    <!-- Input for number of lines -->
+    <div class="section">
+      <h3>Input Line Data</h3>
+      <div class="input-row">
+        <label for="numLines">Number of lines:</label>
+        <input type="number" id="numLines" min="1" value="6" />
+        <div class="button-group">
+          <button onclick="generateLineTable()">Generate Line Table</button>
+          <button onclick="autofillFiveBusLines()">Autofill IEEE 5-Bus Lines</button>
+        </div>
+      </div>
+      <div id="lineTableContainer"></div>
+    </div>
+
+    <!-- Measurement Data Section -->
+    <div class="section">
+      <h3>Measurement Data</h3>
+      <div class="input-row">
+        <label for="numMeas">Total Measurements:</label>
+        <input type="number" id="numMeas" min="1" value="8" />
+        <div class="button-group">
+          <button onclick="generateMeasTable()">Generate Measurement Table</button>
+          <button onclick="autofillFiveBusMeas()">Autofill IEEE 5-Bus Measurement Data</button>
+        </div>
+      </div>
+      <h4 id="measurementTypes" style="display: none;">
+        Types of Measurement Data (Type:1 Voltage, Type:2 Real power injection, Type:3 Reactive power injection, Type:4 Real power flow, Type:5 Reactive power flow)
+        <br> Mention the following for Types 1, 2 and 3 measurement data:
+        <br> "From" column: Bus number; "To" column: NA 
+      </h4>
+      <div id="measTableContainer"></div>
+    </div>
+
+    <!-- State Estimation Section -->
+    <div class="section">
+      <h3>State Estimation</h3>
+      <div class="input-row">
+        <label for="tolerance">Tolerance:</label>
+        <input type="number" id="tolerance" value="1e-4" step="any" />
+        <label for="Iteration">No. of Iteration:</label>
+        <input type="number" id="Iteration" value="20" step="any" />
+        <div class="button-group">
+          <button onclick="runEstimation()">Run State Estimation</button>
+        </div>
+      </div>
+      <div id="resultContainer"></div>
+    </div>
+
+    <footer>&copy; 2025 Virtual Labs | IIT Roorkee</footer>
+  </div>
+
+  <!-- Instructions Modal -->
+  <div id="instructionsModal" class="modal">
+    <span class="close" id="closeModal"></span>
+    <div class="modal-content">
+      <p>
+        <b>STEP 1</b>: Enter the number of lines in a power system. Then, click on the <b>“Generate Line Table”</b> and fill the details of lines i.e., From, To, R(pu), X (pu), B/2 (pu).  
+        <br><b>Note:</b> Line data for a standard IEEE 5-Bus system is provided. Click on <b>“Autofill IEEE 5-Bus Lines”</b>.
+        <br><br>
+        <b>STEP 2</b>: Enter the total measurements data in a power system. Then, click on the <b>“Generate Measurement Table”</b> and fill the measurement data i.e., Type (1=Voltage, 2=Real power injection, 3=Reactive power injection, 4=Real power flow, 5=Reactive power flow), From, To, Value, and Rii (error in measurement).  
+        <br><b>Note:</b> Measurement data for a standard IEEE 5-Bus system is provided. Click on <b>“Autofill IEEE 5-Bus Measurement Data”</b>.
+        <br><br>
+        <b>STEP 3</b>: Enter the value of “Tolerance” and "No. of Iteration". Click on <b>“Run State Estimation”</b>. The values of the states estimated will be displayed i.e., Bus: Voltage magnitude (V (pu)) and Angle (degree).
+      </p>
+    </div>
+  </div>
+ <script src="script.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

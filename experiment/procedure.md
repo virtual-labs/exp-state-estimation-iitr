@@ -1,6 +1,6 @@
 <div style="font-family: 'Nunito Sans', sans-serif; font-size: 20px;text-align: justify;">
 
-### Procedure for Newton-Raphson power flow
+### Procedure for Power System State Estimation
 <b>STEP 1</b>: Enter the number of lines in a power system. Then, click on the “Generate Line Table” and fill the details of lines i.e., From, To, R(pu), X (pu), B/2 (pu).  
 <br>
 <b>Note:</b> Line data for an standard IEEE 5-Bus system is provided. To access the data click on the button of Autofill Line Data: IEEE 5-Bus Lines.
